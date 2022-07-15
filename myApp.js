@@ -3,10 +3,10 @@ let app = express();
 
 app.use("/public", express.static(__dirname + "/public"));
 
-// app.get("/", (req, res) => {
-//     // res.send("Hello Express");
-//     res.sendFile(__dirname + "/views/index.html");
-//   });
+app.get("/", (req, res) => {
+    // res.send("Hello Express");
+    res.sendFile(__dirname + "/views/index.html");
+  });
 
   app.get("/json", (req, res) => {
     res.json({
