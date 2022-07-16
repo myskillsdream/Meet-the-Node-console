@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 
   });
 
-  let getCurrentDateString = () => {
+  function getCurrentDateString(){
     return new Date().toString();
   }
 
