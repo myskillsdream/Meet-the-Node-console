@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 
   });
 
-  function getCurrentDateString(){
+  let getCurrentDateString = () => {
     return new Date().toString();
   }
 
@@ -46,7 +46,13 @@ app.get("/", (req, res) => {
 console.log("Hello World");
 
 
+app.get("/:word/echo", (req, res) => {
+    const { word } = req.params;
+    
+    res.json({echo: word});
+        
 
+  });
 
 
 
