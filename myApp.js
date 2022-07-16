@@ -38,8 +38,12 @@ app.get("/", (req, res) => {
       next();
     },
     function(req, res){
+
+        setTimeout(function() {
+            res.json({time: req.time});
+          }, 1000);
       
-      res.json({time: req.time});
+      
     }
   );
 
