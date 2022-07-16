@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   });
 
   function getCurrentDateString(){
-    return new Date().toString();
+    return new Date().getTime().toString();
   }
 
   app.get("/now", (req, res, next) => {
