@@ -28,8 +28,8 @@ app.get("/", (req, res) => {
 
   });
 
-  const getCurrentDateString = () => {
-    return new Date().toString()
+  let getCurrentDateString = () => {
+    return new Date().toString();
   }
 
   app.get("/now", (req, res, next) => {
