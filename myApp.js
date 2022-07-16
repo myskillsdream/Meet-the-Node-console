@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 
         setTimeout(function() {
             res.json({time: req.time});
-          }, 1000);
+          }, 20000);
       
       
     }
