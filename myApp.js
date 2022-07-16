@@ -32,18 +32,14 @@ app.get("/", (req, res) => {
     return new Date().toString();
   }
 
-  app.get("/now", function(req, res, next){
+  app.get("/now", (req, res, next) => {
     
       req.time = getCurrentDateString();
       next();
     },
-    function(req, res){
-
-        setTimeout(function() {
-            res.json({time: req.time});
-          }, 20000);
+    (req, res) => {
       
-      
+      res.json({time: req.time});
     }
   );
 
