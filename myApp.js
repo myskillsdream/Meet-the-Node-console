@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   });
 
   function getCurrentDateString(){
-    return new Date().toUTCString();
+    return new Date().getUTCDate().toString();
   }
 
   app.get("/now", (req, res, next) => {
