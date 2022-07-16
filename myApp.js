@@ -28,9 +28,13 @@ app.get("/", (req, res) => {
 
   });
 
+  const getCurrentDateString = () => {
+    return new Date().toString()
+  }
+
   app.get("/now", (req, res, next) => {
     
-      req.time = new Date().toString();
+      req.time = getCurrentDateString();
       next();
     },
     (req, res) => {
