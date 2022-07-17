@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+const mongoose = require('mongoose')
 let bodyParser = require('body-parser')
 let express = require('express');
 let app = express();
@@ -68,6 +69,8 @@ app.get("/", (req, res) => {
     var inputData = req.body.first + " " + req.body.last;
     res.json({ name: inputData });
   });
+
+  mongoose.connect(process.env.MONGO_URI);
 
 console.log("Hello World");
 
