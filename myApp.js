@@ -61,6 +61,14 @@ app.get("/", (req, res) => {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
 
+  app.post("/name", function(req, res) {
+
+    // Handle input data at from the form
+
+    var inputData = req.body.first + " " + req.body.last;
+    res.json({ name: inputData });
+  });
+
 console.log("Hello World");
 
 
